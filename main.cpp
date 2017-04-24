@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     	if(timer-start!= old_time and window.graph){
     		old_time=timer-start;
     		int num = rand() % 1000;
-            window.addPoint(1,-num); //this gives graph 1 have a negative min value which is nice for testing
+            window.addPoint(1,-num); //this gives graph 1 a negative min value which is nice for testing
             for(int i=1;i<=24;i++){
     		  window.addPoint(i,num);
             }
