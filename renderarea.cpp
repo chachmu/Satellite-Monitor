@@ -81,7 +81,8 @@ void RenderArea::paintEvent(QPaintEvent *)
         xVal+=7;
     }
 
-    //everything from here down is horrible but manages to account for character widths and other issues, if its not very broken its probably easier to just not mess with it
+    //everything from here down is a horrible mess that somehow manages to account for character widths and other issues.
+    //If its not super broken then its probably easier to just not touch it
 
     painter.drawLine(QPoint(xVal,fontHeight-1),QPoint(xVal,setHeight - 2));
     while(round(i)<=round(drawMax)){
