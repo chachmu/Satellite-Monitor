@@ -14,7 +14,7 @@ const int IdRole = Qt::UserRole;
 Window::Window()
 {
     close=false;
-    graph=true; 
+    graph=true;
 
 
     //Graphs and Warning Lights
@@ -72,7 +72,7 @@ Window::Window()
 
     QLabel *tempUnitLabel = new QLabel("Temperature Units: Tenths of a Degree Celsius");
     QLabel *themistorLabel = new QLabel("Thermistor numbers are 1-24, inclusive");
-    
+
     startButton = new QPushButton("Start");
     connect(startButton, SIGNAL (released()), this, SLOT (startButtonTrigger()));
     startButton->setEnabled(false);
@@ -137,7 +137,7 @@ void Window::saveButtonTrigger(){
                 fileName+=".csv";
             }
         }
-        
+
         std::ofstream myfile;
         myfile.open(fileName.c_str());
         for(int i=0;i<renderList.size();i++){
@@ -146,7 +146,7 @@ void Window::saveButtonTrigger(){
             convert<<i;
 
             myfile<<"Thermistor "<<convert.str()<<" Time: ";
-            
+
             for(int p=0;p<renderList[i]->points.size();p++){
                 myfile<<renderList[i]->points[p].x();
                 if(p<renderList[i]->points.size()-1){
