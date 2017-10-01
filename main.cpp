@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     int old_time = 0;
 
     while(!window.close){
-    	time(&timer);//timer is unneccessary, I just needed test cases that didn't go by at the speed of light
+    	time(&timer); //Most of this code is just to add test values for the gui
     	if(timer-start!= old_time and window.graph){
     		old_time=timer-start;
     		int num = rand() % 1000;
