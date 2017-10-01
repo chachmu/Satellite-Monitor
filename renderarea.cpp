@@ -89,7 +89,7 @@ void RenderArea::paintEvent(QPaintEvent *)
          convert<<(int) i;
 
         float yVal=top-(top*i/pMultiplier)+zero + baseline;
-    
+
         painter.drawText(QPoint(0,yVal),QString(convert.str().c_str()));
         painter.drawLine(QPoint(xVal,yVal-1),QPoint(xVal+10,yVal-1));
         i+=currentScale;
@@ -108,7 +108,7 @@ void RenderArea::paintEvent(QPaintEvent *)
         QPoint startPoint=QPoint(points[index].x()-shift,points[index].y());
         //stop indexing points that shift off the screen to the left
         while(startPoint.x()<0){
-            index++;    
+            index++;
             startPoint=QPoint(points[index].x()-shift,points[index].y());
         }
 
